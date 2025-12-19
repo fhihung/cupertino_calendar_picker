@@ -132,7 +132,10 @@ class _CupertinoPickerButtonState<T> extends State<CupertinoPickerButton<T>>
       child: Container(
         decoration: BoxDecoration(
           color: decoration.backgroundColor,
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: decoration.borderRadius ??
+              BorderRadius.circular(
+                8.0,
+              ),
         ),
         alignment: Alignment.center,
         height: 34.0.scale(context),
